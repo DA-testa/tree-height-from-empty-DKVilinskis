@@ -18,8 +18,7 @@ def compute_height(n, parents):
                 maxH = times
                 current = parents[current]
                 seen[current] = 1
-    maxH = max(maxH)
-    return maxH
+    return max(maxH)
 
 
 def main():
