@@ -22,13 +22,13 @@ def compute_height(n, parents):
 
 
 def main():
-    inputType = input()
-    if "I" in inputType:
+    nameFile = input()
+    if "I" in nameFile:
         numbers = int(input())
         parents = list(map(int, input().split()))
         computed = compute_height(numbers,parents)
         print(computed)
-    elif "F" in inputType:
+    elif "F" in nameFile:
         fileName = input()
         if "a" not in fileName:
             file = "test/" + fileName
@@ -41,5 +41,3 @@ def main():
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-main()
-# print(numpy.array([1,2,3]))
