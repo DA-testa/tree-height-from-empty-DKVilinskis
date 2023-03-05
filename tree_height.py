@@ -15,7 +15,7 @@ def compute_height(n, parents):
             current = i
             while current != -1:
                 times = times + 1
-                maxH = times
+                maxH[i] = times
                 current = parents[current]
                 seen[current] = 1
     return max(maxH)
